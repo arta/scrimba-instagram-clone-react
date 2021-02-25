@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/src/lib/firebase.js
 /.pnp
 .pnp.js
 
