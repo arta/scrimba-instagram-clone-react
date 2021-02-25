@@ -10,7 +10,7 @@ const firebaseConfig = {
 // www.gstatic.com/firebasejs/8.2.9/firebase-app.js pulled in on index.html
 // declares a firebase global variable (on window)
 // so, we can now write window.firebase...
-const Firebase = window.firebase.initializeApp(firebaseConfig);
-const { FieldValue } = Firebase.firestore; // Karl: window.firebase.firestore;
+const FirebaseApp = window.firebase.initializeApp(firebaseConfig);
+const { FieldValue } = FirebaseApp.firestore; // Karl: window.firebase.firestore;
 
-export { Firebase, FieldValue };
+export { FirebaseApp, FieldValue };
