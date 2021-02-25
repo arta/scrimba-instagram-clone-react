@@ -11,5 +11,6 @@ const firebaseConfig = {
 // declares a firebase global variable (on window)
 // so, we can now write window.firebase...
 const Firebase = window.firebase.initializeApp(firebaseConfig);
+const { FieldValue } = Firebase.firestore; // Karl: window.firebase.firestore;
 
-export { Firebase };
+export { Firebase, FieldValue };

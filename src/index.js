@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Firebase } from './lib/firebase';
+import { Firebase, FieldValue } from './lib/firebase';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 
