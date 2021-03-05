@@ -1,4 +1,41 @@
-# Getting Started with Create React App
+# Step by step Setup
+• Assuming Node.js (comes w/ npm & npx) installed \
+: used: XCode (Command Line Tools), Homebrew, asdf
+
+• `../scrimba % npx create-react-app instagram-clone-react` \
+: Creates a complete, barebone app w/ `package.json` & `.gitignore`, `/src`, `/public` ..
+
+• `../scrimba % cd instagram-..`
+
+• Commit, push to github
+
+• `../instagram-.. % npm install date-fns react-loading-skeleton react-router-dom`
+
+• Set Firebase credentials env variables to access in `/src/lib/firebase.js` \
+: <= Do not push sensitive info to github \
+: React can read env variables (from `process.env.`) if they start w/ `REACT_APP_`
+
+• Implement Firebase (& FieldValue) in the app:
+
+: in `/src/lib/firebase.js`: \
+:: `const FirebaseApp = window.firebase.initializeApp(firebaseConfig);` \
+:: `const { FieldValue } = FirebaseApp.firestore;` // Karl: `window.firebase.firestore;` \
+:: `export { FirebaseApp, FieldValue };`
+
+: in `index.js`: \
+:: `import { FirebaseApp, FieldValue } from 'src/lib/firebase';`
+
+• Create FirebaseContext in `index.js`
+
+• Seed Firebase w/ data \
+: requires toggling of Firebase authentication rules (in Firebase web console) \
+:: failed Firebase seeding authentication (to write the seed data) \
+:: causes an 'invalid data' issue, which in turn causes a 'CORS' issue  \
+:: (which was all hard to catch & "debug")
+
+
+
+# (Orig by React:)* Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
